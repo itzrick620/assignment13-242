@@ -21,17 +21,21 @@ const showSixers = async () => {
   
       const seasons = document.createElement("p");
       seasons.innerHTML = sixer.NBASeasons;
-      section.append(NBASeasons);
+      section.append(seasons);
   
       const posit = document.createElement("p");
-      posit.innerHTML = jet.position;
+      posit.innerHTML = sixer.position;
       section.append(posit);
+
+      const careerSummary = document.createElement("p");
+      careerSummary.innerHTML = "Career Summary: " + sixer.careerSummary.join(", ");
+      section.append(careerSummary);
   
-      let summary = document.createElement("div");
+      /*const summary = document.createElement("div");
       details.classList.add("sixer-summary");
       section.append(summary);
       
-      Object.keys(jet).forEach((key) => {
+      bject.keys(sixer).forEach((key) => {
         if(key == "careerSummary") {
           let careerSummary = document.createElement("p");
           section.append(careerSummary);
@@ -42,7 +46,7 @@ const showSixers = async () => {
             careerSummary.append(sixer[key]);
           }
         }
-      });
+      }); */
   
       const img = document.createElement("img");
       img.src = sixer.img;
@@ -52,7 +56,7 @@ const showSixers = async () => {
   
   const getSixers = async () => {
     try {
-        return (await fetch("http://localhost:3000/api/sixers")).json();
+        return (await fetch("http://localhost:3005/api/sixers")).json();
     } catch(error) {
         console.log("error retrieving json");
         return "";
