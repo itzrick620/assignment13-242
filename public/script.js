@@ -2,8 +2,8 @@ const showSixers = async () => {
     const sixersJSON = await getSixers();
     const sixersDiv = document.getElementById("sixers-div");
   
-    if(jetsJSON == "") {
-      console.log("Invalid load of JSON");
+    if(sixersJSON == "") {
+      console.log("JSON Could Not Be Loaded");
       return;
     }
   
