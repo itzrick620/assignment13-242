@@ -31,23 +31,6 @@ const showSixers = async () => {
       careerSummary.innerHTML = "Career Summary: " + sixer.careerSummary.join(", ");
       section.append(careerSummary);
   
-      /*const summary = document.createElement("div");
-      details.classList.add("sixer-summary");
-      section.append(summary);
-      
-      bject.keys(sixer).forEach((key) => {
-        if(key == "careerSummary") {
-          let careerSummary = document.createElement("p");
-          section.append(careerSummary);
-      
-          if(Array.isArray(sixer[key])) {
-            careerSummary.append(sixer[key].join(", "));
-          } else {
-            careerSummary.append(sixer[key]);
-          }
-        }
-      }); */
-  
       const img = document.createElement("img");
       img.src = sixer.img;
       section.append(img);
