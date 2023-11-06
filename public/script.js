@@ -56,9 +56,9 @@ const showSixers = async () => {
   
   const getSixers = async () => {
     try {
-        return (await fetch("http://localhost:3005/api/sixers")).json();
+        return (await fetch("/api/sixers")).json();
     } catch(error) {
-        console.log("error retrieving json");
+        console.log("Error retrieving json");
         return "";
     }
   }
